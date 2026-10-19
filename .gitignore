@@ -1,0 +1,27 @@
+# Python / virtual environment
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Conversion artefacts (work files, reports, output and backup folders)
+*.cvtmp
+*.log
+_cornverter_naplo.csv
+_cornverter_jelentes.md
+cornverter_report_*.csv
+cornverter_report_*.md
+*_PDF/
+*_originals/
+*_eredeti_fileok_cornolva/
+
+# Editors / OS
+.idea/
+.vscode/
+Thumbs.db
+desktop.ini

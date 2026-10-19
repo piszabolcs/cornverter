@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cornverter"
+dynamic = ["version"]   # single source of truth: cornverter/__init__.py
+description = "Converts a folder of mixed files (spreadsheets, documents, e-mails, images, archives) into PDFs."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Pintér Szabolcs" }]
+dependencies = [
+    "PySide6>=6.6",
+    "reportlab>=4.0",
+    "pypdf>=4.0",
+    "Pillow>=10.0",
+    "img2pdf>=0.5",
+    "openpyxl>=3.1",
+    "xlrd>=2.0",
+    "extract-msg>=0.48",
+    "py7zr>=0.21",
+    "rarfile>=4.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-qt>=4.4"]
+
+[tool.setuptools.dynamic]
+version = { attr = "cornverter.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["cornverter*"]
